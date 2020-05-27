@@ -1,0 +1,94 @@
+
+/*------------------------------- Font */
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600,700,800,900');
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+
+/*------------------------------- Header */
+header {
+    border: 1px solid #000;
+    border-radius: 15px;
+    min-height: 4em;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    color: #000;
+    /* the logo was centered in html using <center> */
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*------------------------------- Main-section */
+
+.main-section{
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+/*------------------------------- First-sub-section - (left-side) */
+
+
+.left-side {
+    margin-top: 10em;
+}
+
+.question{
+    font-size: 2.2em;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    padding-left: 2.3em;
+}
+
+.answers {
+    border: 1px solid #000;
+    border-radius: 15px;
+    width: 80%;
+    min-height: 3em;
+    padding: 1.5em;
+    margin: auto;
+}
+
+label {
+    padding-left: 1.2em;
+    padding-right: 0.3em;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+
+
+/*------------------------------- Second-sub-section - (right-side)*/
+
+.right-side {
+    margin-top: 7em;
+}
+
+
+
+/*------------------------------- Footer*/
+
+.contact {
+    font-size: 1.3em;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+    float: right;
+    padding-top: 0.5em;
+    padding-right: 1em;
+}
+
+ footer {
+    border: 1px solid #000;
+    border-radius: 15px;
+    min-height: 3.5em;
+ }

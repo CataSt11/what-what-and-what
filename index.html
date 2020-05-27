@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    <title>What, what and what?</title>
+</head>
+
+<body>
+
+<!-- Header
+
+Contains only the logo. 
+Being a simple app does not have any navigation bar. Everything happens on the index page. 
+The contact details are in the footer
+-->
+
+    <header>
+
+        <div>
+            <a href="index.html">
+                <span class="logo">
+                    <center>What, what & what?</center>
+                </span>
+            </a>
+        </div>
+
+    </header>
+
+
+
+<!-- Main section
+
+Contains two sections. First section takes the left side - on 33% of the screen -, 
+whlie the second takes the rest of the screen on the right side.
+--> 
+
+
+    <div class="row no-gutters container-fluid main-section">
+
+        <!--First section -left-side-
+        Contains a form -type readio- with one question -h1 element tag-  and three possible answers.
+        -->
+
+        <section class="col-sm-4 left-side">
+
+                <h1 class="question">How are you today?</h1>
+
+                <div class="answers">
+
+                    <form>
+
+                        <label for="happy">Happy!</label>
+                        <input type="radio" id="good" name="happy">
+
+                        <label for="meh">Meh!</label>
+                        <input type="radio" id="meh" name="meh">
+
+                        <label for="low">Low!</label>
+                        <input type="radio" id="low" name="low">
+
+                    </form>
+
+                </div>
+
+        </section>
+
+        
+
+        <!--Second section -right-side-
+
+        Contains the recommendations for music, films and food. 
+        Each are separated in own class and 'sub-sections'. 
+        Recommendations are made according to the answer given in the form contained in the first section
+        -->
+
+        <section class="col-sm-8 right-side">
+
+            <div class="listen">
+                <p>What to listen:</p>
+                <h2>Music recommendations</h2>
+                <div class="music"></div>
+            </div>
+
+            <div class="see">
+                <p>What to see:</p>
+                <h2>Film recommendations</h2>
+                <div class="film"></div>
+            </div>
+
+            <div class="eat">
+                <p>What to eat:</p>
+                <h2>Food recommendations</h2>
+                <div class="food"></div>
+            </div>
+
+        </section>
+
+    </div>
+
+<!--Footer
+Contains the contact details. The email provided is not a real email address and it's not meant to be used
+-->
+
+    <footer>
+        <div class="container-fluid">
+            <span class="contact">Contact us at what@what.com</span>
+        </div>
+    </footer>
+
+</body>
+</html>
