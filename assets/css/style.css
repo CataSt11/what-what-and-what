@@ -29,7 +29,20 @@ a:hover {
     text-decoration: none;
 }
 
+/*------------------------------- About-section */
+
+.about {
+    font-size: 0.9em;
+    letter-spacing: 0.2em;
+    padding: 1em;
+    margin: 0;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+
 /*------------------------------- Main-section */
+
 
 .main-section{
     border: 1px solid #000;
@@ -40,7 +53,7 @@ a:hover {
 
 
 .left-side {
-    margin-top: 10em;
+    padding-top: 10em;
 }
 
 .question{
@@ -71,7 +84,8 @@ label {
 /*------------------------------- Second-sub-section - (right-side)*/
 
 .right-side {
-    margin-top: 7em;
+    padding-top: 7em;
+    /* the right-side was centered in html using <center> */
 }
 
 
