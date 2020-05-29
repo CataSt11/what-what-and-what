@@ -1,6 +1,8 @@
 
 /*------------------------------- Font */
 
+
+
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600,700,800,900');
 
 body {
@@ -8,7 +10,11 @@ body {
 }
 
 
+
 /*------------------------------- Header */
+
+
+
 header {
     border: 1px solid #000;
     border-radius: 15px;
@@ -19,7 +25,7 @@ header {
 
 .logo {
     font-size: 2.5em;
-    font-weight: 100;
+    font-weight: 200;
     letter-spacing: 0.1em;
     color: #000;
     /* the logo was centered in html using <center> */
@@ -29,11 +35,16 @@ a:hover {
     text-decoration: none;
 }
 
+
+
 /*------------------------------- About-section */
+
+
 
 .about {
     font-size: 0.9em;
     letter-spacing: 0.2em;
+    font-weight: 200;
     padding: 1em;
     margin: 0;
     border: 1px solid #000;
@@ -41,7 +52,9 @@ a:hover {
 }
 
 
+
 /*------------------------------- Main-section */
+
 
 
 .main-section{
@@ -49,18 +62,22 @@ a:hover {
     border-radius: 15px;
 }
 
+
+
 /*------------------------------- First-sub-section - (left-side) */
 
 
+
 .left-side {
-    padding-top: 10em;
+    padding-top: 7.5em;
 }
 
 .question{
     font-size: 2.2em;
     font-weight: 100;
     letter-spacing: 0.1em;
-    padding-left: 2.3em;
+    padding-left: 2.2em;
+    padding-bottom: 1.2em;
 }
 
 .answers {
@@ -75,28 +92,66 @@ a:hover {
 label {
     padding-left: 1.2em;
     padding-right: 0.3em;
-    font-size: 1.5em;
-    font-weight: 200;
+    font-size: 1.3em;
+    font-weight: 100;
+    letter-spacing: 0.1em;
 }
 
 
 
 /*------------------------------- Second-sub-section - (right-side)*/
 
+
+
 .right-side {
-    padding-top: 7em;
+    padding-top: 5em;
     /* the right-side was centered in html using <center> */
 }
+
+.right-side p {
+    font-size: 1.3em;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+}
+
+.right-side h3 {
+    font-size: 2.1em;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+}
+
+.listen,
+.see,
+.eat {
+    padding-top: 2.5em;
+    padding-bottom: 1.5em;
+}
+
+.eat {
+    padding-bottom: 3.5em;
+}
+
+.music,
+.film,
+.food {
+    width: 65%;
+    min-height: 10em;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
 
 
 
 /*------------------------------- Footer*/
 
+
+
 .contact {
     font-size: 1.3em;
     font-weight: 200;
     letter-spacing: 0.2em;
-    float: right;
+    float: left;
     padding-top: 0.5em;
     padding-right: 1em;
 }
