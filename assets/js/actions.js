@@ -1,5 +1,19 @@
+
+// ready event function
+
+$(document)
+    .ready(function() {
+        $(document).on('click', 'input[type=radio]', function() {
+            const id = $(this).attr('id');
+            apply (id);
+        });
+        
+    });
+
+
+
 // list of songs that will be iterated
-// the recommendations for the users will be made according to the choice took in the form
+// the recommendations for the users will be made according to the choice/mood picked in the form
 
 const songs = [
     {
@@ -109,7 +123,8 @@ const songs = [
 ]
 
 
-// 
+// food recommendation function
+// iterates through the song list and returns the recommendations for the mood
 
 
 function apply (mood) {
@@ -129,11 +144,63 @@ function getMusic (mood) {
     return result;
 };
 
-$(document)
-    .ready(function() {
-        $(document).on('click', 'input[type=radio]', function() {
-            const id = $(this).attr('id');
-            apply (id);
-        });
-        
-    });
+
+// list of recipes that will be iterated
+// the recommendations for the users will be made according to the choice took in the form
+
+
+const recipes = [
+    {
+        recipe: 'Carrot cake',
+        bbcGoodFood: 'carrot-cake',
+        mood: 'happy'
+    },
+
+    {
+        recipe: 'Frying pan pizza w/ aubergine, ricotta & mint',
+        bbcGoodFood: 'frying-pan-pizza-aubergine-ricotta-mint',
+        mood: 'happy'
+    },
+
+    {
+        recipe: 'Huevos rancheros',
+        bbcGoodFood: 'easy-huevos-rancheros',
+        mood: 'happy'
+    },
+
+    {
+        recipe: 'Sweet & sour chicken',
+        bbcGoodFood: 'easy-sweet-sour-chicken',
+        mood: 'meh'
+    },
+
+    {
+        recipe: 'Millionaire’s shortbread',
+        bbcGoodFood: 'easy-millionaires-shortbread',
+        mood: 'meh'
+    },
+
+    {
+        recipe: 'Ultimate chorizo ciabatta',
+        bbcGoodFood: 'ultimate-chorizo-ciabatta',
+        mood: 'meh'
+    },
+
+    {
+        recipe: 'Chicken fajitas',
+        bbcGoodFood: 'easy-chicken-fajitas',
+        mood: 'low'
+    },
+
+    {
+        recipe: 'Chocolate molten cakes',
+        bbcGoodFood: 'easy-chocolate-molten-cakes',
+        mood: 'low'
+    },
+
+    {
+        recipe: 'Hearty pasta soup',
+        bbcGoodFood: 'hearty-pasta-soup',
+        mood: 'low'
+    }
+]
