@@ -13,7 +13,7 @@ $(document)
 
 
 // list of songs that will be iterated
-// the recommendations for the users will be made according to the choice/mood picked in the form
+// the recommendations for the users will be made according to the answer/mood picked in the form
 
 const songs = [
     {
@@ -123,15 +123,87 @@ const songs = [
 ]
 
 
-// food recommendation function
-// iterates through the song list and returns the recommendations for the mood
 
+// list of recipes that will be iterated
+// the recommendations for the users will be made according to the answer/mood picked in the form
+// https://www.bbcgoodfood.com/recipes/collection/easy - website where the user is redirected 
+// https://www.bbcgoodfood.com/recipes/ + bbcGoodFoodId - the recipe returned on click
+
+
+const recipes = [
+    {
+        recipe: 'Carrot cake',
+        bbcGoodFoodId: 'carrot-cake',
+        mood: 'happy'
+    },
+
+    {
+        recipe: 'Frying pan pizza w/ aubergine, ricotta & mint',
+        bbcGoodFoodId: 'frying-pan-pizza-aubergine-ricotta-mint',
+        mood: 'happy'
+    },
+
+    {
+        recipe: 'Huevos rancheros',
+        bbcGoodFoodId: 'easy-huevos-rancheros',
+        mood: 'happy'
+    },
+
+    {
+        recipe: 'Sweet & sour chicken',
+        bbcGoodFoodId: 'easy-sweet-sour-chicken',
+        mood: 'meh'
+    },
+
+    {
+        recipe: 'Millionaire’s shortbread',
+        bbcGoodFoodId: 'easy-millionaires-shortbread',
+        mood: 'meh'
+    },
+
+    {
+        recipe: 'Ultimate chorizo ciabatta',
+        bbcGoodFoodId: 'ultimate-chorizo-ciabatta',
+        mood: 'meh'
+    },
+
+    {
+        recipe: 'Chicken fajitas',
+        bbcGoodFoodId: 'easy-chicken-fajitas',
+        mood: 'low'
+    },
+
+    {
+        recipe: 'Chocolate molten cakes',
+        bbcGoodFoodId: 'easy-chocolate-molten-cakes',
+        mood: 'low'
+    },
+
+    {
+        recipe: 'Hearty pasta soup',
+        bbcGoodFoodId: 'hearty-pasta-soup',
+        mood: 'low'
+    }
+]
+
+
+
+// mood function - used to select and group items according to mood in the designated html divs
 
 function apply (mood) {
-    const musicList = getMusic(mood);
+    const songList = getMusic(mood);
     const divMusic = document.getElementById('divMusic');
-    divMusic.innerText = musicList.join ('\n');          
+    divMusic.innerText = songList.join ('\n');    
+    
+    const recipeList = getRecipe(mood);
+    const divFood = document.getElementById('divFood');
+    divFood.innerText = recipeList.join ('\n');
 };
+
+
+
+// music recommendation function
+// iterates through the song list and returns the recommendations for the mood
 
 function getMusic (mood) {
     const result = [];
@@ -145,62 +217,17 @@ function getMusic (mood) {
 };
 
 
-// list of recipes that will be iterated
-// the recommendations for the users will be made according to the choice took in the form
 
+// food recommendation function
+// iterates through the recipes list and returns the recommendations for the mood
 
-const recipes = [
-    {
-        recipe: 'Carrot cake',
-        bbcGoodFood: 'carrot-cake',
-        mood: 'happy'
-    },
-
-    {
-        recipe: 'Frying pan pizza w/ aubergine, ricotta & mint',
-        bbcGoodFood: 'frying-pan-pizza-aubergine-ricotta-mint',
-        mood: 'happy'
-    },
-
-    {
-        recipe: 'Huevos rancheros',
-        bbcGoodFood: 'easy-huevos-rancheros',
-        mood: 'happy'
-    },
-
-    {
-        recipe: 'Sweet & sour chicken',
-        bbcGoodFood: 'easy-sweet-sour-chicken',
-        mood: 'meh'
-    },
-
-    {
-        recipe: 'Millionaire’s shortbread',
-        bbcGoodFood: 'easy-millionaires-shortbread',
-        mood: 'meh'
-    },
-
-    {
-        recipe: 'Ultimate chorizo ciabatta',
-        bbcGoodFood: 'ultimate-chorizo-ciabatta',
-        mood: 'meh'
-    },
-
-    {
-        recipe: 'Chicken fajitas',
-        bbcGoodFood: 'easy-chicken-fajitas',
-        mood: 'low'
-    },
-
-    {
-        recipe: 'Chocolate molten cakes',
-        bbcGoodFood: 'easy-chocolate-molten-cakes',
-        mood: 'low'
-    },
-
-    {
-        recipe: 'Hearty pasta soup',
-        bbcGoodFood: 'hearty-pasta-soup',
-        mood: 'low'
+function getRecipe (mood) {
+    const result = [];
+    for (let i = 0; i < recipes.length; i++) {
+        const recipeData = recipes[i];
+        if (recipeData.mood === mood) {
+            result.push(recipeData.recipe);
+        }
     }
-]
+    return result;
+};
