@@ -61,6 +61,7 @@ whlie the second takes the rest of the screen on the right side.
 
         <!--First section -left-side-
         Contains a form -type radio- with one question -h2 element tag-  and three possible answers/moods.
+        Also contains an empty div that changes the background color according to the selected mood.
         -->
 
         <section class="col-sm-4 left-side">
@@ -72,7 +73,7 @@ whlie the second takes the rest of the screen on the right side.
                     <form>
                     
                         <label for="happy">Happy!</label>
-                        <input type= "radio" id="happy" name="happy">
+                        <input type= "radio" id="happy" class="good" name="happy">
 
                         <label for="meh">Meh!</label>
                         <input type="radio" id="meh" name="meh">
@@ -82,6 +83,9 @@ whlie the second takes the rest of the screen on the right side.
                     
                     </form>
 
+                </div>
+
+                <div class="color-by-mood">
                 </div>
 
         </section>

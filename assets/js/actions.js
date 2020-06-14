@@ -231,3 +231,24 @@ function getRecipe (mood) {
     }
     return result;
 };
+
+
+// color changing by mood - according to the answer/mood picked in the form
+
+
+var btnHappy = document.getElementsById('happy');
+var btnMeh = document.getElementById('meh');
+var btnLow = document.getElementById('low');
+
+btnHappy.click(function(){
+    $('.color-by-mood').css('background-color','#ffd8d0');
+    alert("The button was clicked.");
+});
+
+btnMeh.click(function(){
+    $('.color-by-mood').css('background-color','#aed2d6');
+});
+
+btnLow.click(function(){
+    $('.color-by-mood').css('background-color','#5f4c7a');
+});

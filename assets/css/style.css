@@ -97,6 +97,16 @@ label {
     letter-spacing: 0.1em;
 }
 
+.color-by-mood {
+    border: 1px solid #000;
+    border-radius: 15px;
+    width: 80%;
+    min-height: 42em;
+    margin-left: 2.9em;
+    margin-top: 2.5em;
+    background-color: #fff; 
+}
+
 
 
 /*------------------------------- Second-sub-section - (right-side)*/
