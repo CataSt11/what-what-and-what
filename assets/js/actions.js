@@ -14,6 +14,7 @@ $(document)
 
 // list of songs that will be iterated
 // the recommendations for the users will be made according to the answer/mood picked in the form
+// youtube.com/ + youtubeId
 
 const songs = [
     {
@@ -120,7 +121,69 @@ const songs = [
         youtubeId: 'RsadnWrUY84',
         mood: 'low'
     }
-]
+];
+
+
+
+// list of films that will be iterated
+// the recommendations for the users will be made according to the answer/mood picked in the form
+// www.rottentomatoes.com + rottenTomatoesId
+
+const films = [
+    {
+        film: 'INSIDE OUT',
+        rottenTomatoesId: '/m/inside_out_2015',
+        mood: 'happy'
+    },
+
+     {
+        film: 'NEVER HAVE I EVER',
+        rottenTomatoesId: '/tv/never_have_i_ever/s01',
+        mood: 'happy'
+    },
+
+     {
+        film: 'AMÉLIE',
+        rottenTomatoesId: '/m/amelie',
+        mood: 'happy'
+    },
+
+     {
+        film: 'RUSSIAN DOLL',
+        rottenTomatoesId: '/tv/russian_doll',
+        mood: 'meh'
+    },
+
+     {
+        film: 'DEAD TO ME',
+        rottenTomatoesId: '/tv/dead_to_me',
+        mood: 'meh'
+    },
+
+     {
+        film: 'HOTEL TRANSYLVANIA',
+        rottenTomatoesId: '/m/hotel_transylvania',
+        mood: 'meh'
+    },
+
+     {
+        film: 'JOHN WICK',
+        rottenTomatoesId: '/m/john_wick',
+        mood: 'low'
+    },
+
+     {
+        film: 'ATYPICAL',
+        rottenTomatoesId: '/tv/atypical',
+        mood: 'low'
+    },
+
+     {
+        film: 'TIM BURTON S CORPSE BRIDE',
+        rottenTomatoesId: '/m/corpse_bride',
+        mood: 'low'
+    }
+];
 
 
 
@@ -184,7 +247,7 @@ const recipes = [
         bbcGoodFoodId: 'hearty-pasta-soup',
         mood: 'low'
     }
-]
+];
 
 
 
@@ -194,10 +257,15 @@ function apply (mood) {
     const songList = getMusic(mood);
     const divMusic = document.getElementById('divMusic');
     divMusic.innerText = songList.join ('\n');    
-    
+
+    const filmList = getFilm(mood);
+    const divFilm = document.getElementById('divFilm');
+    divFilm.innerText = filmList.join ('\n');
+
     const recipeList = getRecipe(mood);
     const divFood = document.getElementById('divFood');
     divFood.innerText = recipeList.join ('\n');
+
 };
 
 
@@ -211,6 +279,23 @@ function getMusic (mood) {
         const songData = songs[i];
         if (songData.mood === mood) {
             result.push(songData.title);
+        }
+    }
+    return result;
+};
+
+
+
+
+// film recommendation function
+// iterates through the films list and returns the recommendations for the mood
+
+function getFilm (mood) {
+    const result = [];
+    for (let i = 0; i < films.length; i++) {
+        const filmData = films[i];
+        if (filmData.mood === mood) {
+            result.push(filmData.film);
         }
     }
     return result;
