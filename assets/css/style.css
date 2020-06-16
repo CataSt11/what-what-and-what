@@ -144,7 +144,7 @@ label {
 .music,
 .film,
 .food {
-    width: 65%;
+    width: 80%;
     min-height: 10em;
     border: 1px solid #000;
     border-radius: 15px;
@@ -162,11 +162,193 @@ label {
     letter-spacing: 0.2em;
     float: left;
     padding-top: 0.5em;
-    padding-right: 1em;
+    padding-left: 1em;
 }
 
  footer {
     border: 1px solid #000;
     border-radius: 15px;
     min-height: 3.5em;
- }
+}
+
+
+
+/*------------------------------- Media-queries*/
+
+
+
+@media(max-width: 1024px) {
+
+    .left-side {
+        padding-top: 5.5em;
+    }
+
+    .right-side {
+    padding-top: 2.8em;
+    }
+
+    .question{
+        font-size: 2.1em;
+        font-weight: 200;
+        padding-left: 1.5em;
+    }
+
+    .answers-mood {
+        margin-left: 2.7em;
+        padding: 1em;
+    }
+
+    .color-by-mood {
+        min-height: 45em;
+    }
+
+    label {
+        padding-left: 1em;
+        padding-right: 0.1em;
+        font-size: 1.3em;
+    }
+
+    .music,
+    .film,
+    .food {
+        width: 90%;
+        min-height: 12em;
+    }
+
+    .listen,
+    .see,
+    .eat {
+        padding-top: 1.9em;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .left-side {
+        padding-top: 5em;
+    }
+
+    .right-side {
+    padding-top: 5em;
+    }
+
+    .question{
+        font-size: 2em;
+    }
+
+    label {
+        padding-left: 0.7em;
+        padding-right: 0.1em;
+        font-size: 1.1em;
+    }
+
+    .color-by-mood {
+        min-height: 46em;
+    }
+
+    .music,
+    .film,
+    .food {
+        width: 90%;
+    }
+
+}
+
+@media(max-width: 520px) {
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .about {
+        letter-spacing: 0.1em;
+    }
+
+    .question{
+        padding-left: 1.4em;
+    }
+
+    .answers-mood {
+        width: 90%;
+        margin: auto;
+    }
+
+    label {
+        padding-left: 1em;
+        }
+
+    .color-by-mood {
+        min-height: 7em;
+        margin: auto;
+        margin-top: 1.8em;
+        width: 90%;
+    }
+
+    .right-side {
+        padding-top: 1.3em;
+    }
+
+    .music,
+    .film,
+    .food {
+        width: 90%;
+    }
+
+    .listen,
+    .see,
+    .eat {
+        padding-top: 1.8em;
+        padding-bottom: 1.5em;
+    }
+
+    .eat {
+        padding-bottom: 4em;
+    }
+
+    .contact {
+        font-size: 0.8em;
+        padding-left: 0.8;
+    }
+    
+}
+
+@media(max-width: 520px) {
+    .question{
+        padding-left: 1.8em;
+    }
+
+    label {
+        padding-left: 1.4em;
+        }
+}
+
+@media(max-width: 375px) {
+    .question{
+        padding-left: 1.3em;
+    }
+
+    label {
+        padding-left: 1.2em;
+        }
+}
+
+@media(max-width: 360px) {
+    .question{
+        padding-left: 1.1em;
+    }
+}
+
+@media(max-width: 320px) {
+    .logo {
+        font-size: 1.7em;
+    }
+
+    .question{
+        font-size: 1.6em;
+        padding-left: 1.4em;
+    }
+
+    label {
+        padding-left: 0.6em;
+        }
+}
