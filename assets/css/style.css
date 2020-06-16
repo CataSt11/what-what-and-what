@@ -1,8 +1,6 @@
 
 /*------------------------------- Font */
 
-
-
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600,700,800,900');
 
 body {
@@ -10,10 +8,7 @@ body {
 }
 
 
-
 /*------------------------------- Header */
-
-
 
 header {
     border: 1px solid #000;
@@ -36,10 +31,7 @@ a:hover {
 }
 
 
-
 /*------------------------------- About-section */
-
-
 
 .about {
     font-size: 0.9em;
@@ -52,10 +44,7 @@ a:hover {
 }
 
 
-
 /*------------------------------- Main-section */
-
-
 
 .main-section{
     border: 1px solid #000;
@@ -63,10 +52,7 @@ a:hover {
 }
 
 
-
 /*------------------------------- First-sub-section - (left-side) */
-
-
 
 .left-side {
     padding-top: 7.5em;
@@ -101,17 +87,14 @@ label {
     border: 1px solid #000;
     border-radius: 15px;
     width: 80%;
-    min-height: 42em;
+    min-height: 43.5em;
     margin-left: 2.9em;
     margin-top: 2.5em;
     background-color: #fff; 
 }
 
 
-
 /*------------------------------- Second-sub-section - (right-side)*/
-
-
 
 .right-side {
     padding-top: 5em;
@@ -151,10 +134,7 @@ label {
 }
 
 
-
 /*------------------------------- Footer*/
-
-
 
 .contact {
     font-size: 1.3em;
@@ -172,10 +152,7 @@ label {
 }
 
 
-
 /*------------------------------- Media-queries*/
-
-
 
 @media(max-width: 1024px) {
 
