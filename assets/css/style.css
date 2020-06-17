@@ -2,7 +2,6 @@
 /*------------------------------- Font */
 
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600,700,800,900');
-
 body {
     font-family: "Barlow Condensed", sans-serif;
 }
@@ -34,9 +33,9 @@ a:hover {
 /*------------------------------- About-section */
 
 .about {
-    font-size: 0.9em;
-    letter-spacing: 0.2em;
-    font-weight: 200;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
     padding: 1em;
     margin: 0;
     border: 1px solid #000;
@@ -87,7 +86,7 @@ label {
     border: 1px solid #000;
     border-radius: 15px;
     width: 80%;
-    min-height: 43.5em;
+    min-height: 47em;
     margin-left: 2.9em;
     margin-top: 2.5em;
     background-color: #fff; 
@@ -121,16 +120,17 @@ label {
 }
 
 .eat {
-    padding-bottom: 3.5em;
+    padding-bottom: 6.5em;
 }
 
 .music,
 .film,
 .food {
     width: 80%;
-    min-height: 10em;
+    min-height: 11.5em;
     border: 1px solid #000;
     border-radius: 15px;
+    padding-top: 1em;
 }
 
 
