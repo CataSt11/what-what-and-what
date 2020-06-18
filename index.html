@@ -10,22 +10,18 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="assets/js/actions.js"></script>
+    <script defer src="assets/js/actions.js"></script>
     
     <title>What, what and what?</title>
 </head>
 
 <body>
-
 <!-- Header
-
 Contains only the logo. 
 Being a simple app does not have any navigation bar. Everything happens on the index page. 
 The contact details are in the footer
 -->
-
     <header>
-
         <div>
             <a href="index.html">
                 <h1 class="logo">
@@ -33,15 +29,12 @@ The contact details are in the footer
                 </h1>
             </a>
         </div>
-
     </header>
 
 
 <!--About section
-
 Contains information regarding the app. - how to use it and what is the benefit of using it- 
 -->
-
     <section>
         <p class="about">* What, what & what<br>is an app that gives you inspiration when you don't have!<br>
         What to listen? What to see? What to eat?<br>
@@ -51,46 +44,35 @@ Contains information regarding the app. - how to use it and what is the benefit 
 
 
 <!-- Main section
-
 Contains two sections. First section takes the left side - on 33% of the screen -, 
 whlie the second takes the rest of the screen on the right side.
 --> 
-
-
     <div class="row no-gutters container-fluid main-section">
 
         <!--First section -left-side-
         Contains a form -type radio- with one question -h2 element tag-  and three possible answers/moods.
         Also contains an empty div that changes the background color according to the selected mood.
         -->
-
         <section class="col-sm-4 left-side">
 
-                <h2 class="question">How are you today?</h2>
+            <h2 class="question">How are you today?</h2>
 
-                <div class="answers-mood">
+            <div class="answers-mood">
+                <form>                   
+                    <label for="happy">Happy!</label>
+                    <input type= "radio" id="happy" class="good" name="mood">
 
-                    <form>
-                    
-                        <label for="happy">Happy!</label>
-                        <input type= "radio" id="happy" class="good" name="mood">
+                    <label for="meh">Meh!</label>
+                    <input type="radio" id="meh" name="mood">
 
-                        <label for="meh">Meh!</label>
-                        <input type="radio" id="meh" name="mood">
+                    <label for="low">Low!</label>
+                    <input type="radio" id="low" name="mood">                  
+                </form>
+            </div>
 
-                        <label for="low">Low!</label>
-                        <input type="radio" id="low" name="mood">
-                    
-                    </form>
-
-                </div>
-
-                <div id="divColor" class="color-by-mood">
-                </div>
-
+            <div id="divColor" class="color-by-mood">
+            </div>
         </section>
-
-        
 
         <!--Second section -right-side-
 
@@ -98,7 +80,6 @@ whlie the second takes the rest of the screen on the right side.
         Each are separated in own class and 'sub-sections'. 
         Recommendations are made according to the answer/mood given in the form contained in the first section
         -->
-
         <section class="col-sm-8 right-side">
             <center>
             <div class="listen">
@@ -123,16 +104,15 @@ whlie the second takes the rest of the screen on the right side.
 
     </div>
 
+
 <!--Footer
 Contains the contact details. The email provided is not a real email address and it's not meant to be used
 -->
-
     <footer>
         <div class="container-fluid">
             <span class="contact">Contact us at what@what.com</span>
         </div>
     </footer>
-
 
 </body>
 </html>

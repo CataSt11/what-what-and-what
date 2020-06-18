@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 /**
  * list of songs that will be iterated
- * the recommendations for the users will be made according to the answer/mood picked in the form
+ * the recommendations for the users will be made according to the answer/mood picked in the html form
  * the users will be redirected to YouTube 
 */
 const songs = [
@@ -108,7 +108,7 @@ const songs = [
 
 /**
  * list of films that will be iterated
- * the recommendations for the users will be made according to the answer/mood picked in the form
+ * the recommendations for the users will be made according to the answer/mood picked in the html form
  * the users will be redirected to Rotten Tomatoes 
  */
 const films = [
@@ -192,7 +192,7 @@ const films = [
 
 /**
  * list of recipes that will be iterated
- * the recommendations for the users will be made according to the answer/mood picked in the form
+ * the recommendations for the users will be made according to the answer/mood picked in the html form
  * the users will be redirected to BBCGoodFood
  */
 const recipes = [
@@ -294,14 +294,16 @@ const colors = [
 
 
 /**
- * function used to select and group items according to mood
+ * function used to select and group elements according to mood
  * elements sent to the assigned html div
  *
  * @param {string} mood
  */
 function apply(mood) {
-  // 'const colorCode' put here as it needs prior initialisation in order to run properly 
-  const colorCode = getColor(mood);
+  //get color - this is not an element, but gives color to it
+  const colorCode = getColors(mood);
+  const divColor = document.getElementById("divColor");
+  divColor.style.backgroundColor = colorCode;
 
   // get list of songs
   const songList = getMusic(mood);
@@ -314,15 +316,11 @@ function apply(mood) {
   //get list of recipes
   const recipeList = getRecipes(mood);
   updateElement("divFood", recipeList, colorCode);
-
-  //get color - see 'const colorCode' initialised at the top of this function
-  const divColor = document.getElementById("divColor");
-  divColor.style.backgroundColor = colorCode;
 };
 
 
 /**
- * function used to update recommended music, films and recipes, as well as color
+ * function used to update elements with recommended music, films and recipes, as well as color
  * 
  * @param {string} elementId 
  * @param {object} objectList 
@@ -337,9 +335,9 @@ function updateElement(elementId, objectList, colorCode) {
 
 
 /**
- * function used to create list of recommendations according to the mood
- * returns text for description and links for accessing the information 
- * font color is changed according to the mood 
+ * function used to create lists of elements
+ * returns text for description and links for accessing the information - taken from getMusic, getFilms, getRecipes and getColors functions below.
+ * font color changed according to the mood 
  * 
  * @param {string} listObjects 
  * @param {hex code} colorCode 
@@ -377,7 +375,7 @@ function clearElementChildren(element) {
 
 /**
  * music recommendation function
- * iterates through the song list and returns the recommendations for the mood
+ * iterates through the songs list and returns the recommendations for the selected mood (html form)
  * 
  * @param {string} mood 
  */ 
@@ -385,6 +383,8 @@ function getMusic(mood) {
   const result = [];
   for (let i = 0; i < songs.length; i++) {
     const songData = songs[i];
+    //if mood matches the users' selection, the function returns the song title and the artist as text and underneath a YouTube link (root + YT Id)
+    //information taken from songs object
     if (songData.mood === mood) {
       const youtubeUrl = `https://www.youtube.com/watch?v=${songData.id}`;
       const youtubeTitle = `${songData.artist} - ${songData.title}`;
@@ -400,7 +400,7 @@ function getMusic(mood) {
 
 /**
  * film recommendation function
- * iterates through the films list and returns the recommendations for the mood
+ * iterates through the films list and returns the recommendations for the selected mood (html form)
  * 
  * @param {string} mood 
  */
@@ -408,6 +408,8 @@ function getFilms(mood) {
   const result = [];
   for (let i = 0; i < films.length; i++) {
     const filmData = films[i];
+    //if mood matches the users' selection, the function returns the film title as text and underneath a Rotten Tomatoes link (root + RT Id)
+    //information taken from films object
     if (filmData.mood === mood) {
       const filmUrl = `https://www.rottentomatoes.com${filmData.id}`;
       result.push({
@@ -422,7 +424,7 @@ function getFilms(mood) {
 
 /**
  * food recommendation function
- * iterates through the recipes list and returns the recommendations for the mood
+ * iterates through the recipes list and returns the recommendations for the selected mood (html form)
  * 
  * @param {string} mood 
  */
@@ -430,6 +432,8 @@ function getRecipes(mood) {
   const result = [];
   for (let i = 0; i < recipes.length; i++) {
     const recipeData = recipes[i];
+    //if mood matches the users' selection, the function returns the recipe name as text and underneath a BBCGoodFood link (root + BBCGF Id)
+    //information taken from recipes object
     if (recipeData.mood === mood) {
       const recipeUrl = `https://www.bbcgoodfood.com/recipes/${recipeData.id}`;
       result.push({
@@ -443,11 +447,11 @@ function getRecipes(mood) {
 
 
 /**
- * function used to return the color according to the mood
+ * function used to return the color for the selected mood (html form)
  * 
  * @param {string} mood 
  */
-function getColor(mood) {
+function getColors(mood) {
   for (let i = 0; i < colors.length; i++) {
     const colorData = colors[i];
     if (colorData.mood === mood) {
