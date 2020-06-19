@@ -84,7 +84,6 @@ label {
     min-height: 47em;
     margin-left: 2.9em;
     margin-top: 2.5em;
-    background-color: #fff; 
 }
 
 
@@ -276,7 +275,7 @@ label {
 
     .contact {
         font-size: 0.8em;
-        padding-left: 0.8;
+        padding-left: 0.8em;
     }
     
 }
