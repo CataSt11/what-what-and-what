@@ -2,7 +2,7 @@
  * JSON Data
  * contains strings of songs, films, recipes and colors
  */
-const dataObject = loadJSON("/assets/data.json");
+const dataObject = loadJSON("assets/data.json");
 
 // ready event function
 $(document).ready(function () {
