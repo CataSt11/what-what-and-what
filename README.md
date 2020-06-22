@@ -105,14 +105,14 @@ All links responded correctly to the test. The information is correct and is dis
 
 The HTML code is mentioned at the end as during the validation through W3C Markup Validation Service it had the following errors: 
 
-´´´Error: Element center not allowed as child of element h1 in this context. (Suppressing further errors from this subtree.) 
+* Error: Element ```center``` not allowed as child of element h1 in this context. (Suppressing further errors from this subtree.) <br>
 From line 28, column 21; to line 28, column 28
 
-Error: The center element is obsolete. Use CSS instead.
+* Error: The ```center``` element is obsolete. Use CSS instead. <br>
 From line 28, column 21; to line 28, column 28
 
-Error: The center element is obsolete. Use CSS instead.
-From line 84, column 13; to line 84, column 20.´´´
+* Error: The ```center``` element is obsolete. Use CSS instead. <br>
+From line 84, column 13; to line 84, column 20.
 
 The code does what is expected and works perfectly for now, therefore it was no emergency in changing it, but it has priority '0' for future development.
 
